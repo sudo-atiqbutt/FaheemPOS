@@ -17,4 +17,14 @@ Route::get('/', function () {
 
 ////////////////////////Admin Category Route Start////////////////////////////////////////
 Route::resource('/category','admin\CategoryController');
+
+Route::resource('/product','admin\ProductController');
+
+
+Route::resource('/customer','admin\CustomerController');
+
+Route::resource('/supplier','admin\SupplierController');
+
+Route::resource('/sales','admin\SalesController');
+
 ////////////////////////Admin Company Route End////////////////////////////////////////
