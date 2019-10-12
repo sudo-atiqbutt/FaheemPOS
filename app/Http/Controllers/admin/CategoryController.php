@@ -82,7 +82,6 @@ class CategoryController extends Controller
         $page='editcategory';
         $utils = new CommonUtils;
         $id = $utils->doDecrypt($id);
-        dd($id);
         $res=category::find($id);
          return view('admin.pages.category.edit',compact('res','page'));
     }
@@ -116,6 +115,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        
+        $utils = new CommonUtils;
+        $id = $utils->doDecrypt($id);
         $res=Category::find($id);
         $result=$res->delete();
         if($result)
